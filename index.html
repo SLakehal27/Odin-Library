@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Library</title>
+        <link rel = "stylesheet" href="styles.css">
+        <script src = "book.js" defer></script>
+        <script src = "form.js" defer></script>
+        <script src = "grid.js" defer></script>
+    </head>
+
+    <body>
+        <div class="header">
+            <p>Library</p>
+        </div>
+
+        <div class = "library"></div>
+        <div class="shadow"></div>
+        <div class="bookform">
+            <form id = "bookform">
+                <p class = "title">New Book</p>
+
+                <input type="text" id = "title" name = "title" placeholder="Title">
+                <input type="text" id = "author" name = "author" placeholder="Author">
+                <input type="number" id = "pages" name = "pages" placeholder="Pages" value = "0">
+
+                <div class="bookread">
+                    <p>Have you read this book?</p>
+                    <label for="read">Yes</label>
+                    <input type = "radio" id = "read" name = "hasread">
+                    <label for="notread">No</label>
+                    <input type = "radio" id = "notread" name = "hasread">
+                </div>
+
+                <button onclick="populateLibrary()" type="button">Submit</button>
+            </form>
+        </div>
+        <button class="bookbtn">+</button>
+    </body>
+</html>
