@@ -26,7 +26,7 @@ body{
     height: 72px;
     width: 72px;
     border-radius: 50%;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
     margin: 0 8vh 8vh 0;
@@ -43,11 +43,11 @@ body{
 
 .shadow{
     display: none;
+    position: fixed;
     background: rgb(0,0,0,0.5);
     width: 100vw;
     height: 100vh;
     top:0;
-    position: absolute;
 }
 
 .bookform
@@ -55,7 +55,7 @@ body{
     display: none;
     background: white;
     border-radius: 25px;
-    position: absolute;
+    position: fixed;
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
@@ -163,4 +163,24 @@ body{
 
 .book > p:first-child:hover{
     color: #46515d;
+}
+
+.footer{
+    display: flex;
+    gap: 10px;
+    margin-left: 40vw;
+    position: fixed;
+    bottom: 0;
+    transition: 0.7s;
+    opacity: 0.7;
+}
+
+.footer p{
+    font-size: 24px;
+}
+
+.footer img:first-of-type:hover{
+    transform: scale(1.1);
+    rotate: 360deg;
+    transition: 1s;
 }
