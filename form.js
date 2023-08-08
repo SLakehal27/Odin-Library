@@ -56,8 +56,6 @@ function populateLibrary(){
     }
 
     addBookToLibrary(newBook);
-    console.log("--------------------");
-    printLibrary();
     disableForm();
     
     clearDisplay();

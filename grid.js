@@ -7,7 +7,6 @@ function displayLibrary(){
         book.classList.add("book");
         library.appendChild(book)
     }
-    console.log("displaying library.")
 }
 
 function clearDisplay(){
@@ -16,7 +15,6 @@ function clearDisplay(){
     books.forEach(book =>{
         book.remove();
     })
-    console.log("library cleared");
 }
 
 function addContent(book, index)
@@ -32,7 +30,6 @@ function addContent(book, index)
 
     cancel.textContent = "X";
     cancel.setAttribute('onclick', "removeElement(" + index + ")");
-
     cancel.addEventListener('click', clearDisplay);
     cancel.addEventListener('click', displayLibrary);
 
@@ -46,6 +43,7 @@ function addContent(book, index)
 
     checkBox.setAttribute("type","checkbox");
     checkBox.setAttribute("id","check");
+    checkBox.setAttribute('onclick', "validateCheck(event," + index + ")");
 
     if(myLibrary[index].read == "read")
     {
@@ -59,6 +57,17 @@ function addContent(book, index)
 
     for(let i = 0; i < content.length; i++){
         book.appendChild(content[i]);
+    }
+}
+
+function validateCheck(event, index){
+    const isChecked = event.target.checked;
+
+    if(isChecked){
+        myLibrary[index].setRead("read");
+    }
+    else{
+        myLibrary[index].setRead("not read");
     }
 }
 

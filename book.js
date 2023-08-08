@@ -12,6 +12,11 @@ Book.prototype.info = function(){
     return this.title + " by " + this.author + ", " + this.pages + " pages" + ", " + this.read + ".";
 }
 
+Book.prototype.setRead = function(state)
+{
+    this.read = state;
+}
+
 const hobbit = new Book("The Hobbit", "J.R.R Tolkien", 295, "not read");
 
 function addBookToLibrary(currentBook){
