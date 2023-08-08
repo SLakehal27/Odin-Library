@@ -19,7 +19,8 @@ function clearDisplay(){
     console.log("library cleared");
 }
 
-function addContent(book, index){
+function addContent(book, index)
+{
     const cancel = document.createElement("p");
     const title = document.createElement("p");
     const author = document.createElement("p");
@@ -29,10 +30,15 @@ function addContent(book, index){
     const markAsRead = document.createElement("p");
     const checkBox = document.createElement("input");
 
+    cancel.textContent = "X";
+    cancel.setAttribute('onclick', "removeElement(" + index + ")");
+
+    cancel.addEventListener('click', clearDisplay);
+    cancel.addEventListener('click', displayLibrary);
+
     title.textContent = myLibrary[index].title;
     author.textContent = myLibrary[index].author;
     pages.textContent = myLibrary[index].pages;
-    cancel.textContent = "X";
 
     markAsRead.textContent = "Did you read it?";
 

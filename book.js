@@ -28,5 +28,10 @@ function clearLibrary(){
     myLibrary.length = 0;
 }
 
+function removeElement(index){
+    let removed = myLibrary.splice(index,1);
+    printLibrary();
+}
+
 addBookToLibrary(hobbit);
 printLibrary();
