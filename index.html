@@ -1,48 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Library</title>
-        <link rel = "stylesheet" href="styles.css">
-        <script src = "book.js" defer></script>
-        <script src = "form.js" defer></script>
-        <script src = "grid.js" defer></script>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="book.js" defer></script>
+    <script src="form.js" defer></script>
+    <script src="grid.js" defer></script>
+  </head>
 
-    <body>
-        <div class="header">
-            <p>Library</p>
+  <body>
+    <div class="header">
+      <p>Library</p>
+    </div>
+
+    <div class="library"></div>
+    <div class="shadow"></div>
+    <div class="bookform">
+      <form id="bookform">
+        <h1 class="title">Add a New Book</h1>
+
+        <span class="inputs_container">
+          <input type="text" id="title" name="title" placeholder="Title" />
+          <input type="text" id="author" name="author" placeholder="Author" />
+          <input
+            type="number"
+            id="pages"
+            name="pages"
+            placeholder="Pages"
+            value="0"
+          />
+        </span>
+
+        <div class="bookread">
+          <p>Have you read this book?</p>
+          <label for="read">Yes</label>
+          <input type="radio" id="read" name="hasread" />
+          <label for="notread">No</label>
+          <input type="radio" id="notread" name="hasread" />
         </div>
 
-        <div class = "library"></div>
-        <div class="shadow"></div>
-        <div class="bookform">
-            <form id = "bookform">
-                <p class = "title">New Book</p>
+        <button onclick="populateLibrary()" type="button">Submit</button>
+      </form>
+    </div>
+    <button class="bookbtn">+</button>
 
-                <input type="text" id = "title" name = "title" placeholder="Title">
-                <input type="text" id = "author" name = "author" placeholder="Author">
-                <input type="number" id = "pages" name = "pages" placeholder="Pages" value = "0">
-
-                <div class="bookread">
-                    <p>Have you read this book?</p>
-                    <label for="read">Yes</label>
-                    <input type = "radio" id = "read" name = "hasread">
-                    <label for="notread">No</label>
-                    <input type = "radio" id = "notread" name = "hasread">
-                </div>
-
-                <button onclick="populateLibrary()" type="button">Submit</button>
-            </form>
-        </div>
-        <button class="bookbtn">+</button>
-
-        <div class="footer">
-            <p>Copyright © 2023 SLakehal27</p>
-            <a href = "https://github.com/SLakehal27">
-                <img src = "./images/github-mark.svg" alt = "github" height="50" width="50">
-            </a>
-        </div>
-    </body>
+    <div class="footer">
+      <p>
+        © 2023. Developed by
+        <a
+          href="https://github.com/SLakehal27"
+          target="_blank"
+          title="Developer"
+          >SLakehal27</a
+        >
+      </p>
+    </div>
+  </body>
 </html>
